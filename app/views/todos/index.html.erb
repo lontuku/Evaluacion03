@@ -1,4 +1,22 @@
-<% @todos.each_with_index do |todo, idx| %>
-	<h1> <%= todo.description %>  <%= todo.completed %> </h1>
-<% end %>
+<h1>Todo App</h1>
+  <div class="table">
+    
+    <div class="col-md-6">
+          <% @todos.each do |todo| %>
+          <div class="well">
+            <h2>Tarea</h2>
+            <h3><%= todo.description %>
+            <h3>Estado Actual:	
+           <% if todo.completed == false %>
+ 				<%= 	"Pendiente." %> 
+ 			<% else todo.completed == false %>
+ 				<%= 	"Completa." %>
+			<% end %> 
+			<%= link_to "Ver", todo  %>
+            </h3>
+          </div>
+          <% end %>
+    </div>  
+
+
 
