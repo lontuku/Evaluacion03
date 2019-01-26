@@ -1,0 +1,7 @@
+<h1>Descripción:  <%= @todo.description %> </h1>
+<h2> Estado actual: 
+<% if @todo.completed == false %>
+ <%= 	"Pendiente." %> 
+ <% else @todo.completed == false %>
+ <%= 	"Completa." %> </h2>
+<% end %>
