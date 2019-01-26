@@ -7,12 +7,14 @@
             <h2>Tarea</h2>
             <h3><%= todo.description %>
             <h3>Estado Actual:	
-           <% if todo.completed == false %>
+            <% if todo.completed == false %>
  				<%= 	"Pendiente." %> 
  			<% else todo.completed == false %>
  				<%= 	"Completa." %>
-			<% end %> 
-			<%= link_to "Ver", todo  %>
+			<% end %> </h3>
+			<h3><%= link_to "Ver Detalle", todo  %>
+            </h3>
+            <h3><%= link_to "Borrar", todo, method: :delete  %>
             </h3>
           </div>
           <% end %>
